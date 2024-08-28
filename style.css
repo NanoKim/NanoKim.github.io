@@ -1,0 +1,748 @@
+@charset "utf-8";
+
+body,
+html {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    flex: 1px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+}
+
+header .mainText {
+    width: 100%;
+    height: 300px;
+    background-image: url(images/header.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 85px 0px;
+    box-sizing: border-box;
+}
+
+header .mainText strong {
+    font-family: "Passion One", cursive;
+    color: #fff;
+    font-size: 2em;
+    font-style: italic;
+}
+
+header .slide {
+    width: 240px;
+    position: relative;
+    font-family: "Noto Sans KR", sans-serif;
+    color: #fff;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 1.4em;
+}
+
+header .mainText ul.textSlide {
+    position: relative;
+    width: 100%;
+}
+
+header .slide .textSlide li {
+    font-weight: 700;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 25px;
+    animation: animatetop 2s;
+    -ms-animation: animatetop 2s;
+}
+
+@keyframes animatetop {
+    0% {
+        top: -30px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+header .mainText p {
+    text-align: right;
+    line-height: 25px;
+    font-weight: 300;
+    line-height: 25px;
+}
+
+header nav {
+    width: 100%;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    box-sizing: border-box;
+}
+
+header nav .gnb {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex: 1;
+    font-family: "Passion One", cursive;
+    font-style: italic;
+    box-sizing: border-box;
+}
+
+header nav .gnb a {
+    text-decoration: none;
+}
+
+header nav .gnb li.btn a {
+    font-size: 2.3rem;
+    padding: 13px 0px;
+    cursor: pointer;
+    color: rgb(179, 179, 179);
+    box-sizing: border-box;
+    display: block;
+}
+
+header nav .gnb li.on a {
+    color: rgb(65, 65, 65);
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.wrapper section {
+    width: 100%;
+    padding: 50px 20px;
+    flex: 1px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: none;
+}
+
+.wrapper section#about {
+    display: block;
+}
+
+.wrapper section#about .who h1 {
+    font-family: "Passion One", cursive;
+    font-style: italic;
+    font-size: 2rem;
+    color: rgb(223, 36, 230);
+}
+
+.wrapper section#about .who .me {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex: 1;
+    flex-wrap: wrap;
+    padding: 50px 0px;
+}
+
+.wrapper section#about .who .me .meImg {
+    padding: 20px 0px;
+    box-sizing: border-box;
+}
+
+.wrapper section#about .who .me .meText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 560px;
+}
+
+.wrapper section#about .who .me .meText .meTextImg {
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+}
+
+.wrapper section#about .who .me .meText .meTextImg img {
+    width: 100%;
+}
+
+.wrapper section#about .who .me .meText p {
+    margin-top: 20px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1rem;
+    line-height: 25px;
+}
+
+.wrapper section#about .who .me .meText p span {
+    font-size: 0.8em;
+    color: rgb(138, 138, 138);
+}
+
+.wrapper section#about .who .skills {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.wrapper section#about .who .skills>div {
+    width: 100%;
+    border-top: 1px solid rgb(145, 145, 145);
+    position: relative;
+}
+
+.wrapper section#about .who .skills h5 {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    position: absolute;
+    width: 100px;
+    background-color: #fff;
+    top: -10px;
+    font-weight: 700;
+    color: rgb(73, 73, 73);
+}
+
+.wrapper section#about .who .skills .skillsImg {
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px 0px;
+    display: grid;
+    grid-gap: 35px;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-template-rows: repeat(2, 120px);
+    display: -ms-flexbox;
+    -ms-flex-item-align: start;
+    -ms-flex-pack: justify;
+    -ms-flex-wrap: wrap;
+}
+
+.wrapper section#about .who .skills .backSkill .skillsImg {
+    grid-template-rows: repeat(1, 120px);
+}
+
+.wrapper section#about .who .skills .skillsImg>div {
+    width: 80px;
+    margin: 0 auto;
+}
+
+.wrapper section#about .who .skills .skillsImg>div>span {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    border-radius: 80px;
+    overflow: hidden;
+}
+
+.wrapper section#about .who .skills .skillsImg>div>p {
+    font-size: 1em;
+    margin: 10px 0px;
+    text-align: center;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+/* --------- 프론트엔드 스킬 리스트 --------- */
+
+.frontSkill .skillsImg>div>span.html5 {
+    background-image: url(images/icon01.png);
+    background-position: 0px 0px;
+    background-size: 940%;
+}
+
+.frontSkill .skillsImg>div>span.css3 {
+    background-image: url(images/icon01.png);
+    background-position: -112px 0px;
+    background-size: 940%;
+}
+
+.frontSkill .skillsImg>div>span.vanilla {
+    background-image: url(images/icon01.png);
+    background-position: -224px 0px;
+    background-size: 940%;
+}
+
+.frontSkill .skillsImg>div>span.jquery {
+    background-image: url(images/icon01.png);
+    background-position: -448px 0px;
+    background-size: 940%;
+}
+
+.frontSkill .skillsImg>div>span.typeScript {
+    background-image: url(images/typescript-logo.png);
+    background-position: center;
+    background-size: 85%;
+    background-repeat: no-repeat;
+}
+
+.frontSkill .skillsImg>div>span.react {
+    background-image: url(images/icon01.png);
+    background-position: -560px 0px;
+    background-size: 940%;
+}
+
+.frontSkill .skillsImg>div>span.vue {
+    background-image: url(images/vue-logo.png);
+    background-position: center;
+    background-size: 75%;
+    background-repeat: no-repeat;
+}
+
+/* --------- 백엔드 스킬 리스트 --------- */
+
+.backSkill .skillsImg>div>span.java {
+    background-image: url(images/java-logo.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.backSkill .skillsImg>div>span.node {
+    background-image: url(images/icon02.png);
+    background-position: 0px 0px;
+    background-size: 941%;
+}
+
+.backSkill .skillsImg>div>span.tomcat {
+    background-image: url(images/tomcat-logo.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.backSkill .skillsImg>div>span.oracle {
+    background-image: url(images/oracle-logo.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.backSkill .skillsImg>div>span.spring {
+    background-image: url(images/spring-logo.png);
+    background-position: center;
+    background-size: 75%;
+    background-repeat: no-repeat;
+}
+
+.backSkill .skillsImg>div>span.git {
+    background-image: url(images/icon02.png);
+    background-position: -672px 0px;
+    background-size: 941%;
+}
+
+.backSkill .skillsImg>div>span.gitlab {
+    background-image: url(images/gitlab-logo.png);
+    background-position: center;
+    background-size: 85%;
+    background-repeat: no-repeat;
+}
+
+/* 탭메뉴 프로젝트 스크린 */
+.wrapper section#project {
+    width: 100%;
+}
+
+.wrapper section#project .gridWrap {
+    display: grid;
+    grid-gap: 35px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(1, 300px);
+}
+
+/* 데일리그램 */
+.wrapper section#project .modal {
+    border: 1px solid #c7c7c7;
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.wrapper section#project .modal:hover {
+    transform: translate(0px, -10px);
+    box-shadow: 0px 10px 30px 0px rgba(53, 53, 53, 0.158);
+}
+
+/* 럽스타그램 모달창 작업 */
+.wrapper section#project .lovestargramImg {
+    width: 100%;
+    height: 180px;
+    border-bottom: 1px solid #c7c7c7;
+    background-image: url(images/lovestargram.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wrapper section#project .modalContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.wrapper section#project .modal_wrap {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.wrapper section#project .modal_body {
+    position: relative;
+    width: calc(100vw - 40px);
+    max-width: 1620px;
+    min-height: 188px;
+    z-index: 9;
+    padding: 60px 30px 30px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 30px 0 rgba(46, 46, 46, 0.26);
+    border: 1px solid #ccc;
+}
+
+.wrapper section#project .modal_content {
+    overflow-y: auto;
+    height: 560px;
+    max-height: 920px;
+}
+
+.wrapper section#project .modal_content button {
+    position: absolute;
+    right: 35px;
+    top: 20px;
+    border: none;
+    background-color: #fff;
+    font-size: 25px;
+    color: rgb(73, 73, 73);
+    cursor: pointer;
+}
+
+.wrapper section#project .modal_content button:hover {
+    color: #e00a87;
+}
+
+.wrapper section#project .modal_content .weblink {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #e6e6e650;
+    padding: 80px 15px 40px 15px;
+    box-sizing: border-box;
+    font-size: 65%;
+    line-height: 1.5;
+}
+
+.wrapper section#project .modal_content .weblink p {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 17px;
+    color: rgb(54, 54, 54);
+}
+
+.wrapper section#project .modal_content .weblink a {
+    font-family: "Noto Sans KR", sans-serif;
+    text-decoration: none;
+    border: 1px solid #000;
+    color: rgb(41, 41, 41);
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.wrapper section#project .modal_content .weblink a:hover {
+    background-color: #e00a87;
+    border-color: #e00a87;
+    color: #fff;
+}
+
+.wrapper section#project .modal_content img {
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.wrapper section#project .modal_overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(70, 70, 70, 0.8);
+}
+
+.wrapper section#project .hidden {
+    display: none;
+}
+
+/* 나의 성장일기 */
+
+.wrapper section#project .modal {
+    display: block;
+    text-decoration: none;
+}
+
+.wrapper section#project .diaryAppImg {
+    width: 100%;
+    height: 180px;
+    border-bottom: 1px solid #c7c7c7;
+    background-image: url(images/diaryApp.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wrapper section#project .modalText {
+    font-family: "Noto Sans KR", sans-serif;
+    padding: 30px 30px;
+    box-sizing: border-box;
+}
+
+.wrapper section#project .modalText h3 {
+    color: rgb(70, 70, 70);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.wrapper section#project .modalText span {
+    color: rgb(155, 155, 155);
+    font-size: 0.8rem;
+}
+
+/* 블로그 */
+.wrapper section#project .blog-wrap {
+    width: 100%;
+    margin-top: 100px;
+    border-top: 1px solid #c7c7c7;
+    position: relative;
+}
+
+.wrapper section#project .blog-wrap h5 {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    position: absolute;
+    width: 230px;
+    background-color: #fff;
+    top: -10px;
+    font-weight: 700;
+    color: rgb(73, 73, 73);
+}
+
+.wrapper section#project .blog-wrap .blog-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-rows: repeat(2, 250px);
+}
+
+.wrapper section#project .blog-wrap .blog-grid>a {
+    border: 1px solid #c7c7c7;
+    border-radius: 8px;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.wrapper section#project .blog-wrap .blog-grid>a:hover {
+    transform: translate(0px, -10px);
+    box-shadow: 0px 10px 20px 0px rgba(53, 53, 53, 0.158);
+}
+
+.wrapper section#project .blog-wrap .blog-grid>a>.blog-img {
+    width: 100%;
+    height: 150px;
+    border-bottom: 1px solid #c7c7c7;
+}
+
+.wrapper section#project .blog-wrap .blog-grid>a>.blog-txt {
+    font-family: "Noto Sans KR", sans-serif;
+    padding: 20px 20px;
+    box-sizing: border-box;
+}
+
+.wrapper section#project .blog-wrap .blog-grid>a>.blog-txt>h3 {
+    color: rgb(70, 70, 70);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.wrapper section#project .blog-wrap .blog-grid>a>.blog-txt>span {
+    color: rgb(155, 155, 155);
+    font-size: 0.8rem;
+}
+
+/* 블로그 이미지 */
+.wrapper section#project .blog-wrap .blog-grid>a:nth-child(1)>.blog-img {
+    background-image: url(images/blog1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wrapper section#project .blog-wrap .blog-grid>a:nth-child(2)>.blog-img {
+    background-image: url(images/blog2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wrapper section#project .blog-wrap .blog-grid>a:nth-child(3)>.blog-img {
+    background-image: url(images/blog3.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wrapper section#project .blog-wrap .blog-grid>a:nth-child(4)>.blog-img {
+    background-image: url(images/blog4.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wrapper section#project .blog-wrap .blog-grid>a:nth-child(5)>.blog-img {
+    background-image: url(images/blog5.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wrapper section#project .blog-wrap .blog-grid>a:nth-child(6)>.blog-img {
+    background-image: url(images/blog6.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* 연락처 */
+.wrapper section#contact .contactWrap {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    box-sizing: border-box;
+}
+
+.wrapper section#contact .contactWrap .contactImg {
+    width: 100%;
+    max-width: 350px;
+    margin-top: 35px;
+    margin-right: 35px;
+    transition: all 0.3s ease;
+}
+
+.wrapper section#contact .contactWrap .contactImg img {
+    width: 100%;
+    height: 85%;
+}
+
+.wrapper section#contact .contactWrap .contactImg:hover {
+    transform: translate(15px, 0px);
+}
+
+.wrapper section#contact .contactWrap .mail {
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 400px;
+}
+
+.wrapper section#contact .contactWrap .mail h1 {
+    font-family: "Passion One", cursive;
+    font-style: italic;
+    font-size: 2rem;
+    color: rgb(255, 189, 46);
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.wrapper section#contact .contactWrap .mail .mailLink {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+}
+
+.wrapper section#contact .contactWrap .mail .mailLink>a {
+    text-decoration: none;
+    color: rgb(71, 71, 71);
+    font-family: "Passion One", cursive;
+    font-style: italic;
+    font-size: 1.5rem;
+    word-break: break-all;
+    margin: 20px 0px;
+    text-align: center;
+}
+
+.wrapper section#contact .contactWrap .mail .mailLink>i {
+    font-size: 2rem;
+    margin-right: 15px;
+}
+
+.wrapper section#contact .contactWrap .mail span {
+    font-family: "Noto Sans KR", sans-serif;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    padding: 20px 10px;
+    color: #8a8a8a;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+    line-height: 20px;
+}
+
+footer {
+    width: 100%;
+}
+
+footer span {
+    width: 100%;
+    color: rgb(190, 190, 190);
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 0.8rem;
+    text-align: center;
+    display: inline-block;
+    padding: 30px 0px;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 1024px) {
+    .wrapper section#project .block:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .wrapper section#contact .contactWrap .contactImg:hover {
+        transform: none;
+    }
+}
