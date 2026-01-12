@@ -1,9 +1,2 @@
-node_modules
-scss
-package.json
-package-lock.json
-.travis.yml
-debug.log
-gulpfile.js
-LICENSE
-.browserslistrc
+# misc
+.DS_Store
