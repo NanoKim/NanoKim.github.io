@@ -171,7 +171,7 @@ html, body {
 .hamburger span {
   width: 24px;
   height: 2px;
-  background: #fff;
+  background: #000;
 }
 
 /* MOBILE */
@@ -182,7 +182,7 @@ html, body {
     right: 0;
     width: 200px;
     height: calc(100vh - 70px);
-    background: rgba(15,15,15,0.95);
+    background: var(--bg-color);
     flex-direction: column;
     padding: 40px;
     transform: translateX(100%);
