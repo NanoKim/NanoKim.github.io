@@ -2387,6 +2387,7 @@ html, body {
   padding: 25px 15px 15px 15px;
   flex: none;
   width: 100%;
+  height: 520px;
   border: 1px solid;
   border-radius: 12px;
   background: transparent;
